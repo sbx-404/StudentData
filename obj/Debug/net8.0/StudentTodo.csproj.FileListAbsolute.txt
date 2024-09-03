@@ -440,3 +440,4 @@
 /home/sparta/dotnet/StudentTodo/bin/Debug/net8.0/Microsoft.AspNetCore.Razor.Language.dll
 /home/sparta/dotnet/StudentTodo/bin/Debug/net8.0/Microsoft.CodeAnalysis.Razor.dll
 /home/sparta/dotnet/StudentTodo/obj/Debug/net8.0/StudentTodo.MvcApplicationPartsAssemblyInfo.cs
+/home/sparta/dotnet/StudentTodo/obj/Debug/net8.0/StudentTodo.sourcelink.json

@@ -74,6 +74,43 @@ namespace StudentTodo.Controllers
         }
         
 
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var DataFromDb = _db.StudentTodos.Find(id);
+            if (DataFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(DataFromDb);
+
+        }
+        // [HttpPost]
+        // [ValidateAntiForgeryToken]
+        // public ActionResult Delete (StudentTable obj)
+        // {
+        //         _db.StudentTodos.Remove(obj);
+        //         _db.SaveChanges();
+        //         return RedirectToAction("Index");
+        // }
+
+        // this another way to delete data
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost (int? id)
+        {
+                var DataFromDb = _db.StudentTodos.Find(id);
+                if(DataFromDb == null){
+                    return NotFound();
+                }
+                _db.StudentTodos.Remove(DataFromDb);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+        }
 
     }
 }

@@ -17,9 +17,9 @@
 <table class="table table-bordered table-striped" style="width:100%">
 <thead>
 <tr>
-<th>Name</th>
-<th>Age</th>
-<th>City</th>
+<th style="font-size: 25px; border-bottom: 2px; border-color: crimson;">Name</th>
+<th style="font-size: 25px; border-bottom: 2px; border-color: crimson;">Age</th>
+<th style="font-size: 25px; border-bottom: 2px; border-color: crimson;">City</th>
 </tr>
 </thead>
 
@@ -37,7 +37,7 @@
             </td>
             <td><a asp-controller="StudentTable" asp-action="Edit" asp-route-id="@items.Id"><i class="bi bi-pencil-square"></i></a></td>
             
-            <td><a asp-controller="StudentTable" asp-action="Delete"><i class="bi bi-trash3-fill"></i></a></td>
+            <td><a asp-controller="StudentTable" asp-action="Delete" asp-route-id="@items.Id"><i class="bi bi-trash3-fill"></i></a></td>
         </tr>
     }
 </tbody>
